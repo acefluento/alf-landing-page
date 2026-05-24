@@ -4,44 +4,46 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.09 0.01 270);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.12 0.01 270);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.12 0.01 270);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.65 0.2 270);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.18 0.01 270);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.2 0.01 270);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.65 0.2 270);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.25 0.01 270);
-  --input: oklch(0.18 0.01 270);
-  --ring: oklch(0.65 0.2 270);
-  --chart-1: oklch(0.65 0.2 270);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.12 0.01 270);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.65 0.2 270);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.18 0.01 270);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.01 270);
-  --sidebar-ring: oklch(0.65 0.2 270);
+  /* ACE Brand Identity System v1.0 */
+  /* Strategic Red #C8102E | Charcoal Black #0A0A0A | Tagline Gray #4A4A4A | Paper White #FAFAF7 */
+  --background: #FAFAF7;
+  --foreground: #0A0A0A;
+  --card: #FFFFFF;
+  --card-foreground: #0A0A0A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A0A0A;
+  --primary: #C8102E;
+  --primary-foreground: #FAFAF7;
+  --secondary: #F0F0EC;
+  --secondary-foreground: #0A0A0A;
+  --muted: #F0F0EC;
+  --muted-foreground: #4A4A4A;
+  --accent: #C8102E;
+  --accent-foreground: #FAFAF7;
+  --destructive: #C8102E;
+  --destructive-foreground: #FAFAF7;
+  --border: #E0E0DC;
+  --input: #E0E0DC;
+  --ring: #C8102E;
+  --chart-1: #C8102E;
+  --chart-2: #0A0A0A;
+  --chart-3: #4A4A4A;
+  --chart-4: #C8102E;
+  --chart-5: #0A0A0A;
+  --radius: 0.5rem;
+  --sidebar: #FAFAF7;
+  --sidebar-foreground: #0A0A0A;
+  --sidebar-primary: #C8102E;
+  --sidebar-primary-foreground: #FAFAF7;
+  --sidebar-accent: #F0F0EC;
+  --sidebar-accent-foreground: #0A0A0A;
+  --sidebar-border: #E0E0DC;
+  --sidebar-ring: #C8102E;
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: 'Montserrat', 'Montserrat Fallback', sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

@@ -1,13 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
-  title: 'ALF Reputation Engine | Acefluento',
-  description: 'AI-powered reputation intelligence platform. Monitor, analyze, and enhance your brand perception with real-time insights.',
+  title: 'ALF Reputation Engine | ACE Strategic Growth Partners',
+  description: 'AI-powered reputation intelligence platform by Acefluento. Monitor, analyze, and enhance your brand perception with real-time insights.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -41,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

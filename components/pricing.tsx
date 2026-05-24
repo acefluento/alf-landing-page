@@ -63,11 +63,12 @@ export function Pricing() {
     <section id="pricing" className="py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section header */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Pricing</p>
+          <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-foreground md:text-5xl text-balance leading-[1.1]">
             Simple, transparent pricing
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-lg font-medium text-muted-foreground leading-relaxed">
             Choose the plan that fits your needs. All plans include a 14-day free trial.
           </p>
         </div>
@@ -77,36 +78,39 @@ export function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl border p-8 ${
+              className={`relative border p-8 md:p-10 ${
                 plan.highlighted
-                  ? "border-primary bg-primary/5 shadow-lg shadow-primary/10"
-                  : "border-border bg-card"
+                  ? "border-primary bg-foreground text-background"
+                  : "border-border bg-background"
               }`}
             >
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-sm font-medium text-primary-foreground">
+                <div className="absolute -top-3 left-8 bg-primary px-4 py-1 text-xs font-bold uppercase tracking-[0.15em] text-primary-foreground">
                   Most Popular
                 </div>
               )}
               <div>
-                <h3 className="text-xl font-semibold text-foreground">{plan.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{plan.description}</p>
+                <h3 className={`text-lg font-bold tracking-tight ${plan.highlighted ? "text-background" : "text-foreground"}`}>{plan.name}</h3>
+                <p className={`mt-2 text-sm ${plan.highlighted ? "text-background/60" : "text-muted-foreground"}`}>{plan.description}</p>
               </div>
               <div className="mt-6">
-                <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                <span className="text-muted-foreground">{plan.period}</span>
+                <span className={`text-4xl font-black tracking-tight ${plan.highlighted ? "text-background" : "text-foreground"}`}>{plan.price}</span>
+                <span className={plan.highlighted ? "text-background/60" : "text-muted-foreground"}>{plan.period}</span>
               </div>
               <ul className="mt-8 space-y-4">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
+                    <Check className={`h-5 w-5 shrink-0 ${plan.highlighted ? "text-primary" : "text-primary"}`} />
+                    <span className={`text-sm ${plan.highlighted ? "text-background/80" : "text-muted-foreground"}`}>{feature}</span>
                   </li>
                 ))}
               </ul>
               <Button
-                className="mt-8 w-full min-h-[48px]"
-                variant={plan.highlighted ? "default" : "outline"}
+                className={`mt-8 w-full min-h-[52px] font-semibold ${
+                  plan.highlighted
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-foreground text-background hover:bg-foreground/90"
+                }`}
               >
                 {plan.cta}
               </Button>

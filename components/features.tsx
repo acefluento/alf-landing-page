@@ -1,4 +1,4 @@
-import { Activity, BarChart3, Bell, Brain, Globe, Shield, TrendingUp, Users } from "lucide-react"
+import { BarChart3, Bell, Brain, Globe, Shield, TrendingUp } from "lucide-react"
 
 const features = [
   {
@@ -33,48 +33,32 @@ const features = [
   },
 ]
 
-const stats = [
-  { value: "500M+", label: "Data points analyzed daily" },
-  { value: "98.7%", label: "Sentiment accuracy" },
-  { value: "<2s", label: "Alert response time" },
-  { value: "50+", label: "Languages supported" },
-]
-
 export function Features() {
   return (
     <section id="features" className="py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section header */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Capabilities</p>
+          <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-foreground md:text-5xl text-balance leading-[1.1]">
             Everything you need to protect your reputation
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-lg font-medium text-muted-foreground leading-relaxed">
             Comprehensive tools powered by artificial intelligence to monitor, analyze, and enhance how the world sees your brand.
           </p>
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl font-bold text-primary md:text-4xl">{stat.value}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
         {/* Features grid */}
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3 border border-border">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:bg-card/80"
+              className="group bg-background p-8 md:p-10 transition-colors hover:bg-secondary/50"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-foreground">{feature.title}</h3>
+              <h3 className="mt-6 text-lg font-bold text-foreground tracking-tight">{feature.title}</h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
