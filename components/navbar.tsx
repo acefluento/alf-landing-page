@@ -58,14 +58,14 @@ export function Navbar() {
               <Menu className="w-6 h-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-brand-black border-white/[0.06]">
-            <SheetTitle className="wordmark text-lg text-foreground">ACEFLUENTO</SheetTitle>
-            <div className="flex flex-col gap-4 mt-8">
+          <SheetContent side="right" className="bg-brand-black border-white/[0.06] w-[280px] sm:w-[320px] px-8 pt-10">
+            <SheetTitle className="wordmark text-xl text-foreground mb-10">ACEFLUENTO</SheetTitle>
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-foreground/70 hover:text-foreground font-medium py-2 transition-colors"
+                  className="text-foreground/70 hover:text-foreground font-medium text-lg py-3 border-b border-white/[0.04] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -74,7 +74,7 @@ export function Navbar() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-sm mt-4"
+                className="btn-primary text-sm mt-8"
               >
                 Book Strategy Call
               </a>

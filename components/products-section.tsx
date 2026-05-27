@@ -31,7 +31,7 @@ function EtsCard() {
             ))}
           </div>
 
-          <div className="space-y-2 mb-6">
+          <div className="space-y-2 mb-4">
             {etsGuide.valueProps.map((prop) => (
               <div key={prop} className="flex items-center gap-2 text-sm text-foreground/50">
                 <Check className="w-4 h-4 text-brand-green flex-shrink-0" />
@@ -39,6 +39,11 @@ function EtsCard() {
               </div>
             ))}
           </div>
+
+          <p className="text-xs text-foreground/25 italic mb-6">
+            Also a great fit for churches, senior-focused nonprofits, and community
+            organizations helping members navigate everyday tech.
+          </p>
 
           <a href="#ets-launch" className="btn-primary text-sm">
             Pre-Order Now

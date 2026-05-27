@@ -31,6 +31,10 @@ export function EtsLaunchBanner() {
             devices, stay safe online, organize digital accounts, and use modern tools with
             confidence. No jargon. No guessing.
           </p>
+          <p className="text-white/40 text-sm mb-6 italic">
+            Works great for churches, senior-focused nonprofits, and anyone helping
+            others navigate everyday technology.
+          </p>
           <a
             href="#products"
             className="inline-flex items-center justify-center px-8 py-3.5 bg-black text-white font-semibold rounded-full text-sm transition-all hover:bg-black/80"

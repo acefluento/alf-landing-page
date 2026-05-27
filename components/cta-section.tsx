@@ -21,9 +21,7 @@ export function CtaSection() {
         <Reveal>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="btn-primary text-base px-10 py-4"
             >
               Book A Strategy Call

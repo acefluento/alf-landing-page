@@ -6,6 +6,7 @@ import { ProblemStrip } from '@/components/problem-strip'
 import { ProductsSection } from '@/components/products-section'
 import { FaqSection } from '@/components/faq-section'
 import { CtaSection } from '@/components/cta-section'
+import { CalendlySection } from '@/components/calendly-section'
 import { SiteFooter } from '@/components/site-footer'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <ProductsSection />
         <FaqSection />
         <CtaSection />
+        <CalendlySection />
       </main>
       <SiteFooter />
     </>
