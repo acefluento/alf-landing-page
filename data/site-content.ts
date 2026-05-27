@@ -1,4 +1,4 @@
-export const CALENDLY_URL = 'https://calendly.com/acefluento/strategy-call'
+export const CALENDLY_URL = 'https://calendly.com/acefluento/growth-strategy-call-with-nolan'
 
 export const navLinks = [
   { label: 'Services', href: '#services' },
