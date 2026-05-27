@@ -48,7 +48,7 @@ function DashboardMockup() {
 
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-black">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="mono text-foreground/40 mb-6 animate-hero-1">
