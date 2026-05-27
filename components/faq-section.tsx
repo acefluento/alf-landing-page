@@ -31,12 +31,12 @@ export function FaqSection() {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-brand-charcoal border border-white/[0.06] rounded-2xl px-6 data-[state=open]:border-brand-red/30"
+                className="bg-card border border-border rounded-2xl px-6 data-[state=open]:border-brand-red/30"
               >
                 <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-foreground/50 leading-relaxed pb-5">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

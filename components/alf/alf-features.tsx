@@ -52,14 +52,14 @@ export function AlfFeatures() {
             <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
               Everything you need to protect your reputation
             </h2>
-            <p className="mt-4 text-lg text-foreground/50 leading-relaxed">
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Comprehensive tools powered by artificial intelligence to monitor, analyze,
               and enhance how the world sees your brand.
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-16 grid gap-px bg-white/[0.06] md:grid-cols-2 lg:grid-cols-3 border border-white/[0.06]">
+        <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3 border border-border">
           {features.map((feature) => (
             <Reveal key={feature.title} className="fade-up">
               <div className="group bg-background p-8 md:p-10 transition-colors hover:bg-secondary/50 h-full">
@@ -69,7 +69,7 @@ export function AlfFeatures() {
                 <h3 className="mt-6 text-lg font-bold text-foreground tracking-tight">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-foreground/50 leading-relaxed">
+                <p className="mt-3 text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

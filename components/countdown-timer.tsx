@@ -21,7 +21,7 @@ function Digit({ value, label }: { value: number; label: string }) {
       <span className="display text-2xl sm:text-4xl tabular-nums">
         {String(value).padStart(2, '0')}
       </span>
-      <span className="mono text-[9px] text-foreground/50">{label}</span>
+      <span className="mono text-[9px] text-white/50">{label}</span>
     </div>
   )
 }
@@ -60,10 +60,10 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
       <div className="flex items-center gap-3">
         {digits.map((d) => (
           <div key={d.label} className="flex items-baseline gap-1">
-            <span className="display text-lg tabular-nums">
+            <span className="display text-lg tabular-nums text-foreground">
               {String(d.value).padStart(2, '0')}
             </span>
-            <span className="mono text-[8px] text-foreground/40">{d.label}</span>
+            <span className="mono text-[8px] text-muted-foreground">{d.label}</span>
           </div>
         ))}
       </div>
@@ -76,7 +76,7 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
         <div key={d.label} className="flex items-center gap-4">
           <Digit value={d.value} label={d.label} />
           {i < digits.length - 1 && (
-            <span className="display text-2xl sm:text-3xl text-foreground/30">:</span>
+            <span className="display text-2xl sm:text-3xl text-white/30">:</span>
           )}
         </div>
       ))}

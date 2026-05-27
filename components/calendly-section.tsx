@@ -16,7 +16,7 @@ export function CalendlySection() {
               Pick a time that{' '}
               <span className="text-brand-red">works for you.</span>
             </h2>
-            <p className="text-foreground/40 max-w-lg mx-auto">
+            <p className="text-muted-foreground max-w-lg mx-auto">
               30 minutes. No obligation. We&apos;ll review your current setup and map out
               a clear plan of action.
             </p>
@@ -24,7 +24,7 @@ export function CalendlySection() {
         </Reveal>
 
         <Reveal>
-          <div className="rounded-2xl overflow-hidden border border-white/[0.06]">
+          <div className="rounded-2xl overflow-hidden border border-border">
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/acefluento/growth-strategy-call-with-nolan?hide_event_type_details=1&hide_gdpr_banner=1"

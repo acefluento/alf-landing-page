@@ -69,7 +69,7 @@ export function AlfPricing() {
             <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
               Simple, transparent pricing
             </h2>
-            <p className="mt-4 text-lg text-foreground/50 leading-relaxed">
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Choose the plan that fits your needs. All plans include a 14-day free trial.
             </p>
           </div>
@@ -99,7 +99,7 @@ export function AlfPricing() {
                 </h3>
                 <p
                   className={`mt-2 text-sm ${
-                    plan.highlighted ? 'text-background/60' : 'text-foreground/40'
+                    plan.highlighted ? 'text-background/60' : 'text-muted-foreground'
                   }`}
                 >
                   {plan.description}
@@ -114,7 +114,7 @@ export function AlfPricing() {
                   </span>
                   <span
                     className={
-                      plan.highlighted ? 'text-background/60' : 'text-foreground/40'
+                      plan.highlighted ? 'text-background/60' : 'text-muted-foreground'
                     }
                   >
                     {plan.period}
@@ -126,7 +126,7 @@ export function AlfPricing() {
                       <Check className="h-5 w-5 shrink-0 text-brand-red" />
                       <span
                         className={`text-sm ${
-                          plan.highlighted ? 'text-background/80' : 'text-foreground/50'
+                          plan.highlighted ? 'text-background/80' : 'text-muted-foreground'
                         }`}
                       >
                         {feature}

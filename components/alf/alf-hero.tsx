@@ -10,14 +10,14 @@ const stats = [
 
 export function AlfHero() {
   return (
-    <section className="relative overflow-hidden bg-black pt-32 pb-20 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
       <div className="absolute top-0 left-0 right-0 h-px bg-brand-red/20" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-secondary px-4 py-2">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2">
             <span className="h-2 w-2 rounded-full bg-brand-red" />
-            <span className="text-sm font-medium text-foreground/50">
+            <span className="text-sm font-medium text-muted-foreground">
               Introducing ALF Reputation Engine
             </span>
           </div>
@@ -28,7 +28,7 @@ export function AlfHero() {
             <span className="text-brand-red">your revenue.</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg text-foreground/50 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             ALF Reputation Engine monitors, analyzes, and protects your brand across every
             digital surface — so you never get blindsided.
           </p>
@@ -43,12 +43,12 @@ export function AlfHero() {
             </a>
           </div>
 
-          <div className="mt-20 w-full border-t border-b border-white/[0.08] py-8">
+          <div className="mt-20 w-full border-t border-b border-border py-8">
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="display text-2xl md:text-3xl">{stat.value}</div>
-                  <div className="mt-1 text-sm font-medium text-foreground/40">
+                  <div className="mt-1 text-sm font-medium text-muted-foreground">
                     {stat.label}
                   </div>
                 </div>

@@ -18,7 +18,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[rgba(10,10,10,0.85)] backdrop-blur-xl border-b border-white/[0.06] py-3'
+          ? 'bg-background/95 backdrop-blur-xl border-b border-border py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -39,7 +39,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-foreground/50 hover:text-foreground transition-colors font-medium"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
               {link.label}
             </a>
@@ -54,18 +54,18 @@ export function Navbar() {
 
         <Sheet>
           <SheetTrigger asChild>
-            <button className="md:hidden p-2 text-foreground/70 hover:text-foreground" aria-label="Open menu">
+            <button className="md:hidden p-2 text-muted-foreground hover:text-foreground" aria-label="Open menu">
               <Menu className="w-6 h-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-brand-black border-white/[0.06] w-[280px] sm:w-[320px] px-8 pt-10">
+          <SheetContent side="right" className="bg-background border-border w-[280px] sm:w-[320px] px-8 pt-10">
             <SheetTitle className="wordmark text-xl text-foreground mb-10">ACEFLUENTO</SheetTitle>
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-foreground/70 hover:text-foreground font-medium text-lg py-3 border-b border-white/[0.04] transition-colors"
+                  className="text-muted-foreground hover:text-foreground font-medium text-lg py-3 border-b border-border transition-colors"
                 >
                   {link.label}
                 </a>
