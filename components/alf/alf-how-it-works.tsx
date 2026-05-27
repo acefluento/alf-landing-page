@@ -99,7 +99,7 @@ export function AlfHowItWorks() {
                   </div>
                   <div className="space-y-4">
                     <div className="rounded-xl bg-black/20 p-4">
-                      <div className="display text-2xl text-brand-green">+23%</div>
+                      <div className="display text-2xl text-teal">+23%</div>
                       <div className="text-sm font-medium text-white/50">Sentiment Score</div>
                     </div>
                     <div className="rounded-xl bg-black/20 p-4">

@@ -42,7 +42,7 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
 
   if (!remaining) {
     return (
-      <p className={`display text-brand-green ${compact ? 'text-lg' : 'text-2xl'}`}>
+      <p className={`display text-teal ${compact ? 'text-lg' : 'text-2xl'}`}>
         Available Now!
       </p>
     )

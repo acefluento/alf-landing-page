@@ -10,7 +10,7 @@ function DashboardMockup() {
       >
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold">Acquisition Pipeline</h3>
-          <span className="mono text-brand-green">Live</span>
+          <span className="mono text-teal">Live</span>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
@@ -26,8 +26,8 @@ function DashboardMockup() {
 
         <div className="space-y-3">
           {[
-            { label: 'Lead Captured', color: 'bg-brand-green', time: '2m ago' },
-            { label: 'New Booking', color: 'bg-brand-blue', time: '14m ago' },
+            { label: 'Lead Captured', color: 'bg-teal', time: '2m ago' },
+            { label: 'New Booking', color: 'bg-teal-dark', time: '14m ago' },
             { label: 'Strategy Call', color: 'bg-brand-red', time: '1h ago' },
           ].map((e) => (
             <div key={e.label} className="flex items-center gap-3 text-sm">
@@ -81,7 +81,7 @@ export function HeroSection() {
           <div className="space-y-2 animate-hero-5">
             {trustChecks.map((check) => (
               <div key={check} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Check className="w-4 h-4 text-brand-green flex-shrink-0" />
+                <Check className="w-4 h-4 text-teal flex-shrink-0" />
                 {check}
               </div>
             ))}

@@ -7,7 +7,7 @@ function EtsCard() {
   return (
     <div className="feature-card md:col-span-2 relative overflow-hidden">
       <div className="absolute top-4 right-4">
-        <span className="mono text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">
+        <span className="mono text-teal bg-teal/10 px-3 py-1 rounded-full">
           Pre-Order
         </span>
       </div>
@@ -34,7 +34,7 @@ function EtsCard() {
           <div className="space-y-2 mb-4">
             {etsGuide.valueProps.map((prop) => (
               <div key={prop} className="flex items-center gap-2 text-sm text-foreground/50">
-                <Check className="w-4 h-4 text-brand-green flex-shrink-0" />
+                <Check className="w-4 h-4 text-teal flex-shrink-0" />
                 {prop}
               </div>
             ))}
@@ -74,7 +74,7 @@ function AlfCard() {
       <div className="space-y-2 mb-6">
         {alfEngine.features.map((f) => (
           <div key={f} className="flex items-start gap-2 text-sm text-foreground/50">
-            <Check className="w-4 h-4 text-brand-green flex-shrink-0 mt-0.5" />
+            <Check className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
             {f}
           </div>
         ))}
@@ -103,7 +103,7 @@ function ClassesCard() {
       <div className="space-y-2 mb-6">
         {instructorClasses.features.map((f) => (
           <div key={f} className="flex items-start gap-2 text-sm text-foreground/50">
-            <Check className="w-4 h-4 text-brand-green flex-shrink-0 mt-0.5" />
+            <Check className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
             {f}
           </div>
         ))}
