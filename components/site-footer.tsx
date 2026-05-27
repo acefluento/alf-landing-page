@@ -1,4 +1,5 @@
 import { contactInfo } from '@/data/site-content'
+import { AceMonolith } from './ace-logo'
 
 export function SiteFooter() {
   const year = new Date().getFullYear()
@@ -7,12 +8,17 @@ export function SiteFooter() {
     <footer className="border-t border-border py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col items-center md:items-start gap-1">
-            <span className="wordmark text-lg text-foreground tracking-tight">
-              ACEFLUENTO
-            </span>
-            <span className="text-sm text-muted-foreground">Strategic Growth Partners</span>
-          </div>
+          <a href="/" className="flex items-center gap-3">
+            <AceMonolith className="w-7 h-auto text-background" />
+            <div className="flex flex-col">
+              <span className="text-lg font-black tracking-[-0.03em] text-foreground leading-none">
+                ACE
+              </span>
+              <span className="text-[8px] font-medium tracking-[0.35em] text-muted-foreground uppercase leading-none mt-0.5">
+                Strategic Growth Partners
+              </span>
+            </div>
+          </a>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <a

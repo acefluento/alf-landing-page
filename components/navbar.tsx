@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { navLinks, CALENDLY_URL } from '@/data/site-content'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
+import { AceMonolith } from './ace-logo'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -23,15 +24,16 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center">
-            <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="12,2 22,20 2,20" />
-            </svg>
+        <a href="/" className="flex items-center gap-3">
+          <AceMonolith className="w-8 h-auto text-background" />
+          <div className="flex flex-col">
+            <span className="text-lg font-black tracking-[-0.03em] text-foreground leading-none">
+              ACE
+            </span>
+            <span className="text-[9px] font-medium tracking-[0.35em] text-muted-foreground uppercase leading-none mt-0.5">
+              Strategic Growth Partners
+            </span>
           </div>
-          <span className="wordmark text-lg text-foreground tracking-tight">
-            ACEFLUENTO
-          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -59,7 +61,10 @@ export function Navbar() {
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background border-border w-[280px] sm:w-[320px] px-8 pt-10">
-            <SheetTitle className="wordmark text-xl text-foreground mb-10">ACEFLUENTO</SheetTitle>
+            <SheetTitle className="flex items-center gap-3 mb-10">
+              <AceMonolith className="w-7 h-auto text-background" />
+              <span className="text-lg font-black tracking-[-0.03em] text-foreground">ACE</span>
+            </SheetTitle>
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
