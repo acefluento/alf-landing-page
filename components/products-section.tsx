@@ -82,7 +82,7 @@ function AlfCard() {
       <p className="text-sm text-foreground/30 mb-4">
         Starting at <span className="text-foreground font-semibold">{alfEngine.startingPrice}</span>
       </p>
-      <a href="#services" className="btn-ghost text-sm mt-auto">
+      <a href="/alf-reputation-engine" className="btn-ghost text-sm mt-auto">
         Learn More
       </a>
     </div>
