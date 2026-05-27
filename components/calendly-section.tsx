@@ -1,6 +1,6 @@
 'use client'
 
-import { CALENDLY_URL } from '@/data/site-content'
+import Script from 'next/script'
 import { Reveal } from './reveal'
 
 export function CalendlySection() {
@@ -24,20 +24,19 @@ export function CalendlySection() {
         </Reveal>
 
         <Reveal>
-          <div
-            className="rounded-2xl overflow-hidden border border-white/[0.06] bg-white"
-            style={{ minHeight: 660 }}
-          >
-            <iframe
-              src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=ffffff&text_color=0a0a0a&primary_color=c8102e`}
-              width="100%"
-              height="660"
-              frameBorder="0"
-              title="Schedule a strategy call with Acefluento"
-              loading="lazy"
+          <div className="rounded-2xl overflow-hidden border border-white/[0.06]">
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/acefluento"
+              style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
         </Reveal>
+
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
+        />
       </div>
     </section>
   )
