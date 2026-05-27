@@ -7,7 +7,7 @@ export function EtsLaunchBanner() {
       id="ets-launch"
       className="relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #9F0C24 0%, #C8102E 50%, #E0122F 100%)',
+        background: 'linear-gradient(135deg, #7A121A 0%, #AF222E 50%, #E11D48 100%)',
       }}
     >
       <div
