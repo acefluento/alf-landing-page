@@ -1,5 +1,5 @@
-import { trustChecks, CALENDLY_URL } from '@/data/site-content'
-import { Check } from 'lucide-react'
+import { trustChecks, clientLogos, heroTestimonial, CALENDLY_URL } from '@/data/site-content'
+import { Check, Star } from 'lucide-react'
 
 function DashboardMockup() {
   return (
@@ -39,8 +39,32 @@ function DashboardMockup() {
         </div>
       </div>
 
-      <div className="float-card absolute -bottom-4 -right-4 animate-float-delayed">
+      <div className="float-card absolute -bottom-4 -right-4 animate-float-delayed z-20">
         <p className="text-sm font-semibold">Follow-up that happens.</p>
+      </div>
+
+      <div className="hidden lg:block absolute -top-6 -left-10 max-w-[220px] z-20 animate-float">
+        <div className="bg-card border-2 border-border rounded-2xl p-4 shadow-2xl">
+          <div className="flex gap-0.5 mb-2">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
+            ))}
+          </div>
+          <p className="text-sm text-foreground/90 leading-snug mb-3">
+            &ldquo;{heroTestimonial.quote}&rdquo;
+          </p>
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-red to-teal" />
+            <div>
+              <p className="text-xs font-semibold text-foreground leading-tight">
+                {heroTestimonial.name}
+              </p>
+              <p className="text-[10px] text-muted-foreground leading-tight">
+                {heroTestimonial.title}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -48,8 +72,8 @@ function DashboardMockup() {
 
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section className="hero-mesh relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="mono text-muted-foreground mb-6 animate-hero-1">
             Cleveland, OH — Serving Local &amp; Remote
@@ -85,6 +109,20 @@ export function HeroSection() {
                 {check}
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 pt-8 border-t border-border animate-hero-5">
+            <p className="mono text-muted-foreground/60 mb-4">Trusted By Local Brands</p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 opacity-60">
+              {clientLogos.map((logo) => (
+                <span
+                  key={logo}
+                  className="font-bold text-sm md:text-base tracking-tight text-muted-foreground"
+                >
+                  {logo}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

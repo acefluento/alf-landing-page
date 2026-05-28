@@ -18,7 +18,7 @@ function calcRemaining() {
 function Digit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center gap-1">
-      <span className="display text-2xl sm:text-4xl tabular-nums">
+      <span className="display text-2xl sm:text-4xl tabular-nums countdown-glow">
         {String(value).padStart(2, '0')}
       </span>
       <span className="mono text-[9px] text-white/50">{label}</span>
@@ -42,7 +42,7 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
 
   if (!remaining) {
     return (
-      <p className={`display text-teal ${compact ? 'text-lg' : 'text-2xl'}`}>
+      <p className={`display countdown-glow ${compact ? 'text-lg' : 'text-2xl'}`}>
         Available Now!
       </p>
     )
@@ -60,7 +60,7 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
       <div className="flex items-center gap-3">
         {digits.map((d) => (
           <div key={d.label} className="flex items-baseline gap-1">
-            <span className="display text-lg tabular-nums text-foreground">
+            <span className="display text-lg tabular-nums text-amber-500">
               {String(d.value).padStart(2, '0')}
             </span>
             <span className="mono text-[8px] text-muted-foreground">{d.label}</span>
@@ -76,7 +76,7 @@ export function CountdownTimer({ compact = false }: { compact?: boolean }) {
         <div key={d.label} className="flex items-center gap-4">
           <Digit value={d.value} label={d.label} />
           {i < digits.length - 1 && (
-            <span className="display text-2xl sm:text-3xl text-white/30">:</span>
+            <span className="display text-2xl sm:text-3xl text-amber-500/40">:</span>
           )}
         </div>
       ))}

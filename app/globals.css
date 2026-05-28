@@ -214,17 +214,62 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 32px;
-  border: 1px solid var(--border);
+  padding: 13px 31px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
   color: var(--foreground);
   font-weight: 600;
   border-radius: 9999px;
   transition: all 0.3s ease;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.02);
 }
 .btn-ghost:hover {
-  border-color: var(--foreground);
-  background: var(--secondary);
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(175, 34, 46, 0.06);
+  box-shadow: 0 0 0 4px rgba(175, 34, 46, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ── Countdown glow ───────────────────────────── */
+.countdown-glow {
+  color: #F59E0B;
+  text-shadow: 0 0 24px rgba(245, 158, 11, 0.45);
+}
+
+/* ── Hero background mesh ─────────────────────── */
+.hero-mesh {
+  position: relative;
+}
+.hero-mesh::before,
+.hero-mesh::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+  animation: meshFloat 14s ease-in-out infinite;
+}
+.hero-mesh::before {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #AF222E 0%, transparent 70%);
+  top: -100px;
+  left: -150px;
+}
+.hero-mesh::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #0EA5E9 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  animation-delay: -7s;
+}
+@keyframes meshFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(30px, -20px) scale(1.1); }
 }
 
 /* ── Dashboard mockup card ── */

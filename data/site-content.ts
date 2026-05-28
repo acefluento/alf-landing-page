@@ -7,6 +7,20 @@ export const navLinks = [
   { label: 'FAQs', href: '#faqs' },
 ] as const
 
+export const clientLogos = [
+  'Magnolia Manor',
+  'Cleveland Care',
+  'FaithFirst Church',
+  'Northside Roofing',
+  'Heritage Living',
+] as const
+
+export const heroTestimonial = {
+  quote: 'Booked 3 family tours in our first week. Worth every penny.',
+  name: 'Sarah M.',
+  title: 'Magnolia Manor ALF',
+} as const
+
 export const trustChecks = [
   'Built for trust-first businesses',
   'Designed to convert, not just look nice',
