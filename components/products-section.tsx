@@ -1,6 +1,7 @@
 import { etsGuide, alfEngine, instructorClasses } from '@/data/site-content'
 import { CountdownTimer } from './countdown-timer'
 import { Reveal } from './reveal'
+import { PreorderForm } from './preorder-form'
 import { Check, BookOpen, Shield, Monitor } from 'lucide-react'
 
 function EtsCard() {
@@ -45,9 +46,7 @@ function EtsCard() {
             organizations helping members navigate everyday tech.
           </p>
 
-          <a href="#ets-launch" className="btn-primary text-sm">
-            Pre-Order Now
-          </a>
+          <PreorderForm variant="card" />
         </div>
 
         <div className="flex flex-col items-center gap-4">
