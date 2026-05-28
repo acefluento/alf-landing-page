@@ -1,0 +1,11 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="crimson-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AF222E" />
+      <stop offset="100%" stop-color="#7A121A" />
+    </linearGradient>
+  </defs>
+  <path d="M50 12 L80 88 H20 Z" fill="url(#crimson-grad)" />
+  <path d="M50 35 L62 70 H54 L50 60 L46 70 H38 Z" fill="#F9F9FB" />
+  <path d="M15 88 C15 65 30 50 50 50 C70 50 85 65 85 88" stroke="#AF222E" stroke-width="2" stroke-dasharray="4 4" />
+</svg>

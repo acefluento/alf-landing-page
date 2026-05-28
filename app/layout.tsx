@@ -1,41 +1,87 @@
 import type { Metadata, Viewport } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Manrope, Montserrat, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+})
+
 const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700', '800', '900'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+})
 
 export const metadata: Metadata = {
-  title: 'ALF Reputation Engine | ACE Strategic Growth Partners',
-  description: 'AI-powered reputation intelligence platform by Acefluento. Monitor, analyze, and enhance your brand perception with real-time insights.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://www.acefluento.com'),
+  title: {
+    default: 'Acefluento | Digital Growth Systems',
+    template: '%s | Acefluento',
+  },
+  description:
+    'Websites and lead systems for trust-based local brands. Built for assisted living, churches, local service businesses, and digital brands.',
+  keywords: [
+    'digital marketing',
+    'assisted living marketing',
+    'church website',
+    'local business leads',
+    'reputation management',
+    'Cleveland marketing agency',
+    'conversion optimization',
+    'ETS Guide',
+    'technology guide for seniors',
+  ],
+  authors: [{ name: 'Acefluento', url: 'https://www.acefluento.com' }],
+  creator: 'Acefluento',
   icons: {
     icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.acefluento.com',
+    siteName: 'Acefluento',
+    title: 'Acefluento | Digital Growth Systems',
+    description: 'Websites and lead systems for trust-based local brands.',
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Acefluento — Digital Growth Systems',
       },
     ],
-    apple: '/apple-icon.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Acefluento | Digital Growth Systems',
+    description: 'Websites and lead systems for trust-based local brands.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://www.acefluento.com',
   },
 }
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -44,8 +90,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${montserrat.variable} font-sans antialiased`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${montserrat.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
