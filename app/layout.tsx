@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Manrope, Montserrat, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -11,6 +11,7 @@ const manrope = Manrope({
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700', '800', '900'],
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -39,21 +40,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Acefluento', url: 'https://www.acefluento.com' }],
   creator: 'Acefluento',
-import type { Metadata, Viewport } from 'next'
-import { Montserrat } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-export const metadata: Metadata = {
-  title: 'ALF Reputation Engine | ACE Strategic Growth Partners',
-  description: 'AI-powered reputation intelligence platform by Acefluento. Monitor, analyze, and enhance your brand perception with real-time insights.',
-  generator: 'v0.app',
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -68,8 +54,7 @@ export const metadata: Metadata = {
     url: 'https://www.acefluento.com',
     siteName: 'Acefluento',
     title: 'Acefluento | Digital Growth Systems',
-    description:
-      'Websites and lead systems for trust-based local brands.',
+    description: 'Websites and lead systems for trust-based local brands.',
     images: [
       {
         url: '/og-image.png',
@@ -82,8 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Acefluento | Digital Growth Systems',
-    description:
-      'Websites and lead systems for trust-based local brands.',
+    description: 'Websites and lead systems for trust-based local brands.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -96,9 +80,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -112,8 +95,6 @@ export default function RootLayout({
       className={`${manrope.variable} ${montserrat.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">
-    <html lang="en" className="bg-background">
-      <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
