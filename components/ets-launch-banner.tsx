@@ -1,6 +1,6 @@
 import { etsGuide } from '@/data/site-content'
 import { CountdownTimer } from './countdown-timer'
-import { ArrowRight } from 'lucide-react'
+import { PreorderForm } from './preorder-form'
 
 export function EtsLaunchBanner() {
   return (
@@ -63,13 +63,7 @@ export function EtsLaunchBanner() {
             Works great for churches, senior-focused nonprofits, and anyone helping
             others navigate everyday technology.
           </p>
-          <a
-            href="#products"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-red text-white font-semibold rounded-full text-sm transition-all hover:bg-brand-red-dark hover:shadow-[0_8px_24px_rgba(175,34,46,0.45)] hover:-translate-y-0.5"
-          >
-            Pre-Order The Guide
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <PreorderForm variant="banner" />
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-4">
