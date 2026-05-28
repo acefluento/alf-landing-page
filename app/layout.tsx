@@ -39,6 +39,21 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Acefluento', url: 'https://www.acefluento.com' }],
   creator: 'Acefluento',
+import type { Metadata, Viewport } from 'next'
+import { Montserrat } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+export const metadata: Metadata = {
+  title: 'ALF Reputation Engine | ACE Strategic Growth Partners',
+  description: 'AI-powered reputation intelligence platform by Acefluento. Monitor, analyze, and enhance your brand perception with real-time insights.',
+  generator: 'v0.app',
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -80,6 +95,12 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -91,6 +112,8 @@ export default function RootLayout({
       className={`${manrope.variable} ${montserrat.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">
+    <html lang="en" className="bg-background">
+      <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
