@@ -23,7 +23,7 @@ export function ServicesSection() {
             <Reveal key={card.title} className={i % 2 === 0 ? 'fade-left' : 'fade-right'}>
               <div className="feature-card h-full flex flex-col">
                 <h3 className="text-lg font-bold text-foreground mb-3">{card.title}</h3>
-                <p className="text-sm text-foreground/50 leading-relaxed flex-1">
+                <p className="text-sm text-foreground/80 leading-relaxed flex-1">
                   {card.description}
                 </p>
                 <div className="mt-5 flex items-center gap-2 text-brand-red text-sm font-semibold">

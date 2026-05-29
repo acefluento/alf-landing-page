@@ -13,7 +13,7 @@ export function ProblemStrip() {
             Most local brands lose leads{' '}
             <span className="text-brand-red">before the first conversation.</span>
           </h2>
-          <p className="text-foreground/40 max-w-xl mx-auto mb-10 text-lg">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-lg">
             Unclear messaging, weak conversion points, and zero follow-up. You&apos;re
             paying for attention and letting it walk away.
           </p>

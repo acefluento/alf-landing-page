@@ -112,7 +112,7 @@ export function HeroSection() {
           </div>
 
           <div className="mt-10 pt-8 border-t border-border animate-hero-5">
-            <p className="mono text-muted-foreground/60 mb-4">Trusted By Local Brands</p>
+            <p className="mono text-muted-foreground mb-4">Trusted By Local Brands</p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 opacity-60">
               {clientLogos.map((logo) => (
                 <span

@@ -16,11 +16,11 @@ function EtsCard() {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <BookOpen className="w-5 h-5 text-brand-red" />
-            <p className="mono text-foreground/40">Digital Product</p>
+            <p className="mono text-muted-foreground">Digital Product</p>
           </div>
           <h3 className="display text-2xl sm:text-3xl mb-3">{etsGuide.title}</h3>
-          <p className="text-foreground/50 mb-2">{etsGuide.subtitle}</p>
-          <p className="text-sm text-foreground/30 mb-6">
+          <p className="text-foreground/80 mb-2">{etsGuide.subtitle}</p>
+          <p className="text-sm text-muted-foreground mb-6">
             {etsGuide.taglineTop} &mdash; {etsGuide.taglineBottom}
           </p>
 
@@ -34,14 +34,14 @@ function EtsCard() {
 
           <div className="space-y-2 mb-4">
             {etsGuide.valueProps.map((prop) => (
-              <div key={prop} className="flex items-center gap-2 text-sm text-foreground/50">
+              <div key={prop} className="flex items-center gap-2 text-sm text-foreground/80">
                 <Check className="w-4 h-4 text-teal flex-shrink-0" />
                 {prop}
               </div>
             ))}
           </div>
 
-          <p className="text-xs text-foreground/25 italic mb-6">
+          <p className="text-xs text-muted-foreground italic mb-6">
             Also a great fit for churches, senior-focused nonprofits, and community
             organizations helping members navigate everyday tech.
           </p>
@@ -51,8 +51,8 @@ function EtsCard() {
 
         <div className="flex flex-col items-center gap-4">
           <CountdownTimer compact />
-          <p className="mono text-foreground/30">Drops This Friday</p>
-          <p className="text-xs text-foreground/20 text-center max-w-xs">
+          <p className="mono text-muted-foreground">Drops This Friday</p>
+          <p className="text-xs text-muted-foreground/80 text-center max-w-xs">
             {etsGuide.footer}
           </p>
         </div>
@@ -66,19 +66,19 @@ function AlfCard() {
     <div className="feature-card flex flex-col">
       <div className="flex items-center gap-2 mb-3">
         <Shield className="w-5 h-5 text-brand-red" />
-        <p className="mono text-foreground/40">SaaS Product</p>
+        <p className="mono text-muted-foreground">SaaS Product</p>
       </div>
       <h3 className="text-xl font-bold mb-3">{alfEngine.title}</h3>
-      <p className="text-sm text-foreground/50 mb-5 flex-1">{alfEngine.description}</p>
+      <p className="text-sm text-foreground/80 mb-5 flex-1">{alfEngine.description}</p>
       <div className="space-y-2 mb-6">
         {alfEngine.features.map((f) => (
-          <div key={f} className="flex items-start gap-2 text-sm text-foreground/50">
+          <div key={f} className="flex items-start gap-2 text-sm text-foreground/80">
             <Check className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
             {f}
           </div>
         ))}
       </div>
-      <p className="text-sm text-foreground/30 mb-4">
+      <p className="text-sm text-muted-foreground mb-4">
         Starting at <span className="text-foreground font-semibold">{alfEngine.startingPrice}</span>
       </p>
       <a href="/alf-reputation-engine" className="btn-ghost text-sm mt-auto">
@@ -93,15 +93,15 @@ function ClassesCard() {
     <div className="feature-card flex flex-col">
       <div className="flex items-center gap-2 mb-3">
         <Monitor className="w-5 h-5 text-brand-red" />
-        <p className="mono text-foreground/40">Live Training</p>
+        <p className="mono text-muted-foreground">Live Training</p>
       </div>
       <h3 className="text-xl font-bold mb-3">{instructorClasses.title}</h3>
-      <p className="text-sm text-foreground/50 mb-5 flex-1">
+      <p className="text-sm text-foreground/80 mb-5 flex-1">
         {instructorClasses.description}
       </p>
       <div className="space-y-2 mb-6">
         {instructorClasses.features.map((f) => (
-          <div key={f} className="flex items-start gap-2 text-sm text-foreground/50">
+          <div key={f} className="flex items-start gap-2 text-sm text-foreground/80">
             <Check className="w-4 h-4 text-teal flex-shrink-0 mt-0.5" />
             {f}
           </div>

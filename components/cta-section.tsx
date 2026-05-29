@@ -7,12 +7,12 @@ export function CtaSection() {
     <section className="py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <Reveal>
-          <p className="mono text-foreground/40 mb-4">Ready To Grow?</p>
+          <p className="mono text-muted-foreground mb-4">Ready To Grow?</p>
           <h2 className="display text-3xl sm:text-4xl lg:text-5xl mb-6">
             Let&apos;s build a system that{' '}
             <span className="text-brand-red">actually converts.</span>
           </h2>
-          <p className="text-foreground/40 max-w-xl mx-auto mb-10 text-lg">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-lg">
             Book a free strategy call. We&apos;ll review your current setup, identify the
             gaps, and map out a clear plan — no obligation, no fluff.
           </p>
@@ -33,7 +33,7 @@ export function CtaSection() {
         </Reveal>
 
         <Reveal>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-foreground/30">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <a
               href={`tel:${contactInfo.phone.replace(/-/g, '')}`}
               className="flex items-center gap-2 hover:text-foreground transition-colors"

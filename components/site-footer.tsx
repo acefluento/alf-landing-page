@@ -37,7 +37,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border text-center text-xs text-muted-foreground/60">
+        <div className="mt-8 pt-6 border-t border-border text-center text-xs text-muted-foreground">
           &copy; {year} Acefluento LLC. All rights reserved.
         </div>
       </div>
