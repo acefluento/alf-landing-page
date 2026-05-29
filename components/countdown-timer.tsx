@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { etsGuide } from '@/data/site-content'
 
-const TARGET = new Date('2026-05-29T10:00:00-04:00').getTime()
+const TARGET = new Date(etsGuide.launchDate).getTime()
 
 function calcRemaining() {
   const diff = TARGET - Date.now()

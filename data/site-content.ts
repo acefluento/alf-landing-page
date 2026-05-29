@@ -110,7 +110,7 @@ export const etsGuide = {
   footer: 'Practical Skills for Everyday Life — Stay Connected. Stay Safe. Stay Confident.',
   topics: ['Phones', 'Computers', 'Internet', 'Safety', 'AI & More'],
   valueProps: ['Practical Skills', 'Stay Safe Online', 'Use Tech with Confidence'],
-  launchDate: '2026-05-29T10:00:00-04:00',
+  launchDate: '2026-06-05T10:00:00-04:00',
 } as const
 
 export const alfEngine = {
