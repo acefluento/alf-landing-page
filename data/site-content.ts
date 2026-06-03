@@ -7,20 +7,6 @@ export const navLinks = [
   { label: 'FAQs', href: '#faqs' },
 ] as const
 
-export const clientLogos = [
-  'Magnolia Manor',
-  'Cleveland Care',
-  'FaithFirst Church',
-  'Northside Roofing',
-  'Heritage Living',
-] as const
-
-export const heroTestimonial = {
-  quote: 'Booked 3 family tours in our first week. Worth every penny.',
-  name: 'Sarah M.',
-  title: 'Magnolia Manor ALF',
-} as const
-
 export const trustChecks = [
   'Built for trust-first businesses',
   'Designed to convert, not just look nice',
@@ -30,6 +16,7 @@ export const trustChecks = [
 export interface ServiceCard {
   title: string
   description: string
+  startingAt: string
 }
 
 export const serviceCards: ServiceCard[] = [
@@ -37,21 +24,25 @@ export const serviceCards: ServiceCard[] = [
     title: 'Assisted Living & Care Brands',
     description:
       'Families research you online before they ever call. We build trust-first marketing experiences and deploy our ALF Reputation Engine to ensure reviews work for you.',
+    startingAt: 'Scoped per facility — book a call',
   },
   {
     title: 'Churches & Organizations',
     description:
       'Community-driven brands often have the most loyal audiences but no real follow-up. We craft websites that welcome new visitors to your location, members, and mission.',
+    startingAt: 'Scoped per congregation — book a call',
   },
   {
     title: 'Local Service Businesses',
     description:
       'Painters, roofers, contractors — businesses that need lead flow, not just a nice website. We build high-converting landing pages and pair them with automated follow-up systems.',
+    startingAt: 'Scoped per business — book a call',
   },
   {
     title: 'Select Digital Brands',
     description:
       'We support a limited number of info products, SaaS products, and digital brands with proven conversion-first UX patterns. Clean UI, strong copy, and frictionless mechanics.',
+    startingAt: 'Custom scope — book a call',
   },
 ]
 

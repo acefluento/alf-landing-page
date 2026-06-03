@@ -1,5 +1,5 @@
-import { trustChecks, clientLogos, heroTestimonial, CALENDLY_URL } from '@/data/site-content'
-import { Check, Star } from 'lucide-react'
+import { trustChecks, CALENDLY_URL } from '@/data/site-content'
+import { Check } from 'lucide-react'
 
 function DashboardMockup() {
   return (
@@ -9,7 +9,12 @@ function DashboardMockup() {
         style={{ transform: 'rotateY(-8deg) rotateX(4deg)' }}
       >
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold">Acquisition Pipeline</h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-sm font-semibold">Acquisition Pipeline</h3>
+            <span className="mono text-[9px] text-white/40 border border-white/15 rounded-full px-2 py-0.5">
+              Example
+            </span>
+          </div>
           <span className="mono text-teal">Live</span>
         </div>
 
@@ -37,34 +42,14 @@ function DashboardMockup() {
             </div>
           ))}
         </div>
+
+        <p className="text-[10px] text-white/30 leading-snug pt-2 border-t border-white/10">
+          Illustrative dashboard — actual client data is private.
+        </p>
       </div>
 
       <div className="float-card absolute -bottom-4 -right-4 animate-float-delayed z-20">
         <p className="text-sm font-semibold">Follow-up that happens.</p>
-      </div>
-
-      <div className="hidden lg:block absolute -top-6 -left-10 max-w-[220px] z-20 animate-float">
-        <div className="bg-card border-2 border-border rounded-2xl p-4 shadow-2xl">
-          <div className="flex gap-0.5 mb-2">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-            ))}
-          </div>
-          <p className="text-sm text-foreground/90 leading-snug mb-3">
-            &ldquo;{heroTestimonial.quote}&rdquo;
-          </p>
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-red to-teal" />
-            <div>
-              <p className="text-xs font-semibold text-foreground leading-tight">
-                {heroTestimonial.name}
-              </p>
-              <p className="text-[10px] text-muted-foreground leading-tight">
-                {heroTestimonial.title}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )
@@ -98,7 +83,7 @@ export function HeroSection() {
               Book A Strategy Call
             </a>
             <a href="#services" className="btn-ghost">
-              See Our Work
+              Explore Services
             </a>
           </div>
 
@@ -109,20 +94,6 @@ export function HeroSection() {
                 {check}
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 pt-8 border-t border-border animate-hero-5">
-            <p className="mono text-muted-foreground mb-4">Trusted By Local Brands</p>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 opacity-60">
-              {clientLogos.map((logo) => (
-                <span
-                  key={logo}
-                  className="font-bold text-sm md:text-base tracking-tight text-muted-foreground"
-                >
-                  {logo}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
 

@@ -26,9 +26,13 @@ export function ServicesSection() {
                 <p className="text-sm text-foreground/80 leading-relaxed flex-1">
                   {card.description}
                 </p>
-                <div className="mt-5 flex items-center gap-2 text-brand-red text-sm font-semibold">
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </div>
+                <p className="mt-5 mono text-muted-foreground">{card.startingAt}</p>
+                <a
+                  href="#book"
+                  className="mt-3 inline-flex items-center gap-2 text-brand-red text-sm font-semibold hover:gap-3 transition-all"
+                >
+                  Book A Strategy Call <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </Reveal>
           ))}
