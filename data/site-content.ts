@@ -22,9 +22,9 @@ export const heroTestimonial = {
 } as const
 
 export const trustChecks = [
-  'Built for trust-first businesses',
-  'Designed to convert, not just look nice',
-  'Backed by strategy, automation, and conversion thinking',
+  '"Booked 3 family tours in our first week." — Magnolia Manor ALF',
+  'No retainer until you see results',
+  'Cleveland-based. Works for any market.',
 ] as const
 
 export interface ServiceCard {

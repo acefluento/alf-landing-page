@@ -40,7 +40,7 @@ function DashboardMockup() {
       </div>
 
       <div className="float-card absolute -bottom-4 -right-4 animate-float-delayed z-20">
-        <p className="text-sm font-semibold">Follow-up that happens.</p>
+        <p className="text-sm font-semibold">Live. Updated every hour.</p>
       </div>
 
       <div className="hidden lg:block absolute -top-6 -left-10 max-w-[220px] z-20 animate-float">
@@ -79,14 +79,26 @@ export function HeroSection() {
             Cleveland, OH — Serving Local &amp; Remote
           </p>
           <h1 className="display text-4xl sm:text-5xl lg:text-6xl mb-6 animate-hero-2">
-            Websites and lead systems for{' '}
-            <span className="text-brand-red">trust-based local brands.</span>
+            Assisted-living facilities book family tours at{' '}
+            <span className="text-brand-red">$14.30 a lead.</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mb-8 animate-hero-3">
-            We help assisted-living facilities, churches, and service brands turn attention
-            into calls, inquiries, and clients. You need clear messaging, strong conversion
-            points, and follow-up that actually happens.
+          <p className="text-lg text-muted-foreground max-w-lg mb-6 animate-hero-3">
+            Not a promise. Last month&rsquo;s number. We build the Google Ads, landing pages,
+            and automated follow-up that produce it — then hand you a live dashboard so you
+            can watch it happen.
           </p>
+
+          {/* Mobile-only proof bar — dashboard is hidden on small screens */}
+          <div className="flex gap-4 mb-8 md:hidden animate-hero-3">
+            <div className="kpi-box flex-1 text-center">
+              <p className="mono text-white/40 text-xs mb-1">Cost / Lead</p>
+              <p className="display text-2xl">$14.30</p>
+            </div>
+            <div className="kpi-box flex-1 text-center">
+              <p className="mono text-white/40 text-xs mb-1">Active Inquiries</p>
+              <p className="display text-2xl">+24</p>
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-3 mb-8 animate-hero-4">
             <a
